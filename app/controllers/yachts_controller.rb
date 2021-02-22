@@ -20,9 +20,15 @@ class YachtsController < ApplicationController
     end
   end
 
+  def destroy
+    @yacht = Yacht.find(params[:id])
+    @yacht.destroy
+    redirect_to root_path
+  end
+
   private
 
   def yacht_params
-    params.require(:yacht).permit(:yacht_name, :cost_per_night, :yacht_location, :description)
+    params.require(:yacht).permit(:yacht_name, :cost_per_night, :yacht_location)
   end
 end
