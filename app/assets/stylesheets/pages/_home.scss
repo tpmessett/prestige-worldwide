@@ -1,1 +1,55 @@
 // Specific CSS for your home-page
+body {
+  background-color: black;
+  color: white
+}
+
+.header {
+  min-height: 500px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://source.unsplash.com/random/?yacht);
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.yacht {
+  opacity: 0.75;
+  color: black
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.col {
+  padding: 15px
+}
+
+.featured {
+  padding: 15px;
+  color: black;
+  background-color: white;
+  display: inline-block;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #616b72;
+  min-height: 300px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+}
