@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card m-2" style="background-color: black;">
+    <h4 class="m-3">Booking for <%= @booking.start_date %></h4>
+    <h5 class="m-3"><%= @booking.yacht.yacht_name %></h5>
+    <%= cl_image_tag @booking.yacht.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+
+  <div class="card m-2" style="background-color: black;">
+    <p class="m-3">Check-in: <%= @booking.start_date %> Check-out: <%= @booking.end_date %></p>
+    <p class="m-3"><%= @booking.yacht.yacht_location %></p>
+    <p class="m-3"><%= @booking.yacht.description %></p>
+    <p class="m-3"><%= @total %></p>
+  </div>
+</div>

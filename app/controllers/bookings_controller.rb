@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
+    @total = @booking.yacht.cost_per_night * (@booking.end_date - @booking.start_date).to_i
   end
 
   def new
@@ -14,10 +15,13 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.yacht = @yacht
     if @booking.save
-      redirect_to root_path
+      redirect_to yacht_booking_path(@yacht, @booking)
     else
       render :new
     end
+  end
+
+  def booking_cost
   end
 
   def booking_params
