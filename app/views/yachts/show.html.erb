@@ -1,2 +1,13 @@
-<%= @yacht.yacht_name %>
-<%= link_to "Add booking", new_yacht_booking_path(@yacht) %>
+<div class="container">
+  <div class="card m-2" id="cocktail-card" style="background-color: black;">
+    <h4 class="m-3"><%= @yacht.yacht_name %></h4>
+    <%= cl_image_tag @yacht.photo.key, height: 300, width: 400, crop: :fill %>
+    <p style="margin-bottom: 0;"><%= link_to "Add booking", new_yacht_booking_path(@yacht), class: "btn btn-dark m-2 text-right float-right" %></p>
+  </div>
+
+  <div class="card m-2" style="background-color: black;">
+    <h5 class="m-3"><%= @yacht.yacht_location %></h5>
+    <p class="m-3"><%= @yacht.cost_per_night %></p>
+    <p class="m-3"><%= @yacht.description %></p>
+  </div>
+</div>
