@@ -1,1 +1,8 @@
-
+<div class="container">
+  <h3 class="text-center">New booking</h3>
+  <%= simple_form_for [@yacht, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Create booking", class: "btn btn-primary" %>
+  <% end %>
+</div>
