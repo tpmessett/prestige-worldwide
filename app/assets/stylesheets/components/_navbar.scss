@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  color: white;
+  background-color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +10,37 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px, solid, white
+}
+
+.circle-icon {
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.circle-icon:hover {
+  background: black;
+  color: white;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  margin-right: 10px
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: white;
 }
