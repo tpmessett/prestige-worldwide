@@ -1,10 +1,3 @@
-// Import your components CSS files here.
-@import "alert";
-@import "avatar";
-@import "navbar";
-@import "card";
-@import "buttons";
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -60,5 +53,4 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 

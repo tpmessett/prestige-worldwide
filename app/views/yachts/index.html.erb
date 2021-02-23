@@ -1,3 +1,15 @@
 
+<h1>List of all the Yacht</h1>
+<% @yachts.each do |yacht| %>
+  <div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url()">
+    <p>Name: <%= yacht.yacht_name %></p>
+    <p>Cost: <%= yacht.cost_per_night %></p>
+    <p>Location: <%= yacht.yacht_location %></p>
+    <p class="add_booking"><%= link_to "Add booking" %></p>
+  </div>
+  </div>
+<% end %>
+
 
 
