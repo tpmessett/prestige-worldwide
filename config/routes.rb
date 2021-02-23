@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:show, :new, :create]
   end
   resources :bookings, only: :index
+  get '/users/bookings', to: 'users#bookings'
+  get '/users/yachts', to: 'users#yachts'
 end
