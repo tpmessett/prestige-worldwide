@@ -1,3 +1,29 @@
-<% @yachts.each do |booking| %>
-<p><%= "#{yacht.yacht_name}" %></p>
-<% end %>
+<div class="yacht_list container">
+  <% if @yachts.length > 0 %>
+    <% @yachts.each do |yacht| %>
+    <div class="card">
+      <div class="card-header">
+        <%= "#{yacht.yacht_location}" %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= "#{yacht.yacht_name}" %></h5>
+        <p class="card-text"><%= "#{yacht.description}" %></p>
+        <p class="card-text"><%= "This Yacht has has #{yacht.bookings.count} total bookings" %></p>
+        <%= link_to yacht_path(yacht.id) do %>
+          <button class="btn btn-primary">View Yacht</button>
+        <% end %>
+        <%= link_to yacht_path(yacht.id), method: :delete, data: {Confirm: "delete yacht?"} do %>
+          <button class="btn btn-danger">Delete Yacht</button>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <% else %>
+    <p> You don't have any yachts yet. </p>
+    <% end %>
+    <div>
+      <%= link_to new_yacht_path do %>
+        <button class="add-btn btn btn-primary">Add A Yacht</button>
+      <% end %>
+    </div>
+</div>

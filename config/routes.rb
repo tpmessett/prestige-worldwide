@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :bookings, only: :index
   get '/users/bookings', to: 'users#bookings'
   get '/users/yachts', to: 'users#yachts'
+  delete "/yachts/:id", to: "yachts#destroy", as: :yachts_delete
 end
