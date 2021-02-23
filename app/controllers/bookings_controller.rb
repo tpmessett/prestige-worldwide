@@ -5,10 +5,14 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @yacht = Yacht.find(params[:yacht_id])
   end
 
   def create
+    @yacht = Yacht.find(params[:yacht_id])
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.yacht = @yacht
     if @booking.save
       redirect_to root_path
     else
