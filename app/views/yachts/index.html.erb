@@ -1,28 +1,3 @@
-<div class=“container”>
-  <div class=“row”>
-  <% @yachts.each do |yacht| %>
-    <div class=“col-xs-12 col-sm-6”>
-      <div class=“card mb-3" style=“max-width: 540px;“>
-        <div class=“row g-0”>
-          <div class=“d-flex flex-wrap align-items-center col-md-4">
-            <%= link_to yacht_path(yacht) do %>
-                <%= cl_image_tag yacht.photo.key %>
-            <% end %>
-          </div>
-          <div class=“col-md-8">
-            <div class=“card-body”>
-              <h5 class=“card-title”><%= yacht.yacht_name %></h5>
-              <p class=“card-text”><%= yacht.cost_per_night %></p>
-              <%= link_to yacht_path(yacht) do %>
-              <p><button type=“button” class=“btn btn-outline-dark”>Book this yacht</button></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  </div>
-</div>
+
 
 
