@@ -19,6 +19,10 @@
   text-decoration: none;
  }
 
+ h2 {
+  margin-bottom: 40px;
+ }
+
 //  body {
 //   width: 500px;
 //   margin: 0 auto;
@@ -26,7 +30,7 @@
 // }
 
 div.elem-group {
-  margin: 20px 0;
+  margin: 20px 0 40px 0px;
   text-align: center;
 }
 
@@ -39,7 +43,6 @@ div.elem-group.inlined {
 
 label {
   display: block;
-  font-family: 'Nanum Gothic';
   padding-bottom: 10px;
   font-size: 1.25em;
 }
@@ -49,7 +52,6 @@ input, select, textarea {
   border: 2px solid #777;
   box-sizing: border-box;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
   // width: 70%;
   padding: 10px;
 }
@@ -73,7 +75,6 @@ button {
   border: none;
   color: white;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
   border-radius: 4px;
   cursor: pointer;
 }
@@ -113,21 +114,21 @@ button:hover {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
