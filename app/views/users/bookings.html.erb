@@ -9,7 +9,7 @@
           <h5 class="card-title"><%= "#{booking.yacht.yacht_name}" %></h5>
           <p class="card-text"><%= "#{booking.yacht.description}" %></p>
           <%= link_to yacht_booking_path(booking.yacht_id, booking.id) do %>
-            <button class="btn btn-primary">View This Booking</button>
+            <p class="btn btn-primary">View This Booking</p>
           <% end %>
         </div>
         <div class="card-footer">
