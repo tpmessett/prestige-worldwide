@@ -1,74 +1,78 @@
-<form action="reservation.php" method="post">
-  <div class="elem-group">
-    <h1>Find your Yacht</h1>
-  <div class="align">
-    <div>
-    <legend>Select Location</legend>
-      <select id = "myList">
-        <option value = "1">St Tropez</option>
-        <option value = "2">Monaco</option>
-        <option value = "3">Cannes</option>
-        <option value = "4">Palma de Mallorca</option>
-      </select>
-    </div>
-    <div>
-      <legend>Capacity</legend>
+<div class="container">
+  <form action="reservation.php" method="post">
+    <div class="elem-group">
+      <h1>Find your Yacht</h1>
+    <div class="align">
+      <div>
+      <legend>Select Location</legend>
         <select id = "myList">
-          <option value = "1">1-5</option>
-          <option value = "2">1-10</option>
-          <option value = "3">1-25</option>
-          <option value = "4">1-50</option>
+          <option value = "1">St Tropez</option>
+          <option value = "2">Monaco</option>
+          <option value = "3">Cannes</option>
+          <option value = "4">Palma de Mallorca</option>
         </select>
-    </div>
-    <div>
-      <legend>Price</legend>
-        <select id = "myList">
-          <option value = "1">$</option>
-          <option value = "2">$$</option>
-          <option value = "3">$$$</option>
-          <option value = "4">$$$$</option>
-        </select>
-    </div>
-  </div>
-            <br></br>
-    <div class="checkin_border">
-    <legend>Select Dates</legend>
-  <div class="checkin">
-    <div class="elem-group inlined">
-      <label for="checkin-date">Check-in Date</label>
-      <input type="date" id="checkin-date" name="checkin" required>
-    </div>
-    <div class="elem-group inlined">
-      <label for="checkout-date">Check-out Date</label>
-      <input type="date" id="checkout-date" name="checkout" required>
-    </div>
-  </div>
-  <button type="submit">Search</button>
-  <br></br>
-</div>
-<br></br>
-  <br></br>
-</div>
-</form>
-<h1>See all our Luxurious floating destinations:</h1>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="cards">
-      <% @yachts.each do |yacht| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url()">
-          <p>Name: <%= yacht.yacht_name %></p>
-          <p>$<%= yacht.cost_per_night %>/night</p>
-          <p>Location: <%= yacht.yacht_location %></p>
-          <p class="view_yacht"><%= link_to "View Yacht", yacht_path(yacht) %></p>
-        </div>
-      <% end %>
       </div>
-  </div>
-  <div class="col-sm-6">
-    <div id="map"
-         style="width: 100%; height: 100%;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="pk.eyJ1IjoidHBtZXNzZXR0IiwiYSI6ImNra3NkZDliZTBkZ3Yyb3BiYTJsZmZzNjUifQ.zhT0tjfXON0M_1zRolkJ-g">
+      <div>
+        <legend>Capacity</legend>
+          <select id = "myList">
+            <option value = "1">1-5</option>
+            <option value = "2">1-10</option>
+            <option value = "3">1-25</option>
+            <option value = "4">1-50</option>
+          </select>
+      </div>
+      <div>
+        <legend>Price</legend>
+          <select id = "myList">
+            <option value = "1">$</option>
+            <option value = "2">$$</option>
+            <option value = "3">$$$</option>
+            <option value = "4">$$$$</option>
+          </select>
+      </div>
     </div>
+              <br></br>
+      <div class="checkin_border">
+      <legend>Select Dates</legend>
+    <div class="checkin">
+      <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+      </div>
+    </div>
+    <button type="submit">Search</button>
+    <br></br>
+  </div>
+
+  </div>
+  </form>
+  <h2>See all our Luxurious floating destinations:</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="cards">
+        <% @yachts.each do |yacht| %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.0)), url()">
+            <%= cl_image_tag yacht.photo.key, crop: :fill%>
+            <p>Name: <%= yacht.yacht_name %></p>
+            <p>£<%= yacht.cost_per_night %>/night</p>
+            <p>Location: <%= yacht.yacht_location %></p>
+            <p class="view_yacht"><%= link_to "View Yacht", yacht_path(yacht) %></p>
+          </div>
+        <% end %>
+        </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="map"
+           style="width: 100%; height: 100%;"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="pk.eyJ1IjoidHBtZXNzZXR0IiwiYSI6ImNra3NkZDliZTBkZ3Yyb3BiYTJsZmZzNjUifQ.zhT0tjfXON0M_1zRolkJ-g">
+      </div>
+    </div>
+  </div>
+</div>
 
 
