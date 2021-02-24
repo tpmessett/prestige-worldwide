@@ -19,6 +19,83 @@
   text-decoration: none;
  }
 
+//  body {
+//   width: 500px;
+//   margin: 0 auto;
+//   padding: 50px;
+// }
+
+div.elem-group {
+  margin: 20px 0;
+  text-align: center;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  // float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 5px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  // width: 70%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+}
+.checkin {
+  display: flex;
+  padding: 0 20px;
+}
+
+.checkin_border {
+  border: 1px solid #fff;
+  padding: 0 20px;
+  margin: 20px;
+}
+.align {
+  display: flex;
+  justify-content: center;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
