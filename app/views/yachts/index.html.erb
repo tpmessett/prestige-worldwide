@@ -1,3 +1,55 @@
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <h1>Find your Yacht</h1>
+  <div class="align">
+    <div>
+    <legend>Select Location</legend>
+      <select id = "myList">
+        <option value = "1">St Tropez</option>
+        <option value = "2">Monaco</option>
+        <option value = "3">Cannes</option>
+        <option value = "4">Palma de Mallorca</option>
+      </select>
+    </div>
+    <div>
+      <legend>Capacity</legend>
+        <select id = "myList">
+          <option value = "1">1-5</option>
+          <option value = "2">1-10</option>
+          <option value = "3">1-25</option>
+          <option value = "4">1-50</option>
+        </select>
+    </div>
+    <div>
+      <legend>Price</legend>
+        <select id = "myList">
+          <option value = "1">$</option>
+          <option value = "2">$$</option>
+          <option value = "3">$$$</option>
+          <option value = "4">$$$$</option>
+        </select>
+    </div>
+  </div>
+            <br></br>
+    <div class="checkin_border">
+    <legend>Select Dates</legend>
+  <div class="checkin">
+    <div class="elem-group inlined">
+      <label for="checkin-date">Check-in Date</label>
+      <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkout-date">Check-out Date</label>
+      <input type="date" id="checkout-date" name="checkout" required>
+    </div>
+  </div>
+  <button type="submit">Search</button>
+  <br></br>
+</div>
+<br></br>
+  <br></br>
+</div>
+</form>
 <h1>See all our Luxurious floating destinations:</h1>
 <div class="row">
   <div class="col-sm-6">
@@ -18,6 +70,5 @@
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="pk.eyJ1IjoidHBtZXNzZXR0IiwiYSI6ImNra3NkZDliZTBkZ3Yyb3BiYTJsZmZzNjUifQ.zhT0tjfXON0M_1zRolkJ-g">
     </div>
-  </div>
-</div>
+
 

@@ -2,7 +2,7 @@
   <div class ="container head-text">
     <h3>Welcome to Prestige Worldwide</h3>
     <p>Floating success palaces for hire</p>
-    <button type="button" class="btn btn-outline-success">Book a prestige Yacht now!</button>
+    <p><%= link_to "Book a prestige Yacht now!", yachts_path, class: "btn btn-outline-success" %></p>
   </div>
 
 </div>
@@ -11,48 +11,19 @@
   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente voluptatibus doloribus ea ipsam recusandae repellendus, ratione esse! Molestiae, repellendus? Nostrum sint aut sequi aspernatur doloremque. Accusamus quia in quaerat iusto pariatur id ducimus, porro velit impedit voluptate quas, maxime exercitationem debitis non soluta culpa ratione! In id architecto, a!</p>
 
   <h3 class="featured">Featured yachts for hire:</h3>
-
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
+  <div class="row cols-1 row-cols-md-2 g-4">
+    <% @yachts.each do |yacht| %>
+    <div class="col-6">
       <div class="yacht card">
         <img src="https://source.unsplash.com/random/?yacht" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Yacht title</h5>
-          <p class="card-text">Yacht description goes here.</p>
-          <button type="button" class="btn btn-outline-success">Link to yacht page</button>
+          <h5 class="card-title"><%= yacht.yacht_name %></h5>
+          <p class="card-text"><%= yacht.description %></p>
+          <p class="view_yacht"><%= link_to "View Yacht", yacht_path(yacht), class: "btn btn-outline-success" %></p>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="yacht card">
-        <img src="https://source.unsplash.com/random/?yacht" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Yacht title</h5>
-          <p class="card-text">Yacht description goes here.</p>
-          <button type="button" class="btn btn-outline-success">Link to yacht page</button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="yacht card">
-        <img src="https://source.unsplash.com/random/?yacht" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Yacht title</h5>
-          <p class="card-text">Yacht description goes here.</p>
-          <button type="button" class="btn btn-outline-success">Link to yacht page</button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="yacht card">
-        <img src="https://source.unsplash.com/random/?yacht" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Yacht title</h5>
-          <p class="card-text">Yacht description goes here.</p>
-          <button type="button" class="btn btn-outline-success">Link to yacht page</button>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <div class="footer">
@@ -60,6 +31,6 @@
   <h3 class="featured">Invest in Prestige worldwide</h3>
     <p>We're much more than just quality boats, we offer a range of services for the discerning individual and with fast plans for global expansion on all seven continents we're looking for investment now. View our investment pitch now!</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DQDVDOKuA-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="mailto: yourasmartcookie@prestigeworldwide.com"><button type="button" class="btn btn-outline-success">Learn more about invesitng</button></a></p>
+    <p><a href="mailto: yourasmartcookie@prestigeworldwide.com"><button type="button" class="btn btn-outline-success">Learn more about investing</button></a></p>
   </div>
 </div>
