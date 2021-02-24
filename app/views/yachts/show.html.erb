@@ -1,12 +1,22 @@
 <div class="container">
-  <div class="card m-2" style="background-color: black;">
-    <h4 class="m-3"><%= @yacht.yacht_name %></h4>
-
-    <%= cl_image_tag @yacht.photo.key, height: 300, width: 400, crop: :fill %>
-   <p style="margin-bottom: 0;"><%= link_to "Add booking", new_yacht_booking_path(@yacht), class: "btn btn-dark m-2 text-right float-right" %></p>
-
-    <h5 class="m-3"><%= @yacht.yacht_location %></h5>
-    <p class="m-3"><%= @yacht.cost_per_night %></p>
-    <p class="m-3"><%= @yacht.description %></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <%= "This yacht is moored in #{@yacht.yacht_location}" %>
+        </div>
+        <%= cl_image_tag @yacht.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-body">
+          <h5 class="card-title"><%= @yacht.yacht_name %></h5>
+          <p class="card-text"><%= @yacht.description %></p>
+          <%= link_to new_yacht_booking_path(@yacht.id) do %>
+            <button class="btn btn-primary">Book This Yacht</button>
+        <% end %>
+        </div>
+        <div class="card-footer">
+        <%= "From £#{@yacht.cost_per_night} per night" %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
