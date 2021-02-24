@@ -1,6 +1,4 @@
-
-
-  <form action="reservation.php" method="post">
+<form action="reservation.php" method="post">
   <div class="elem-group">
     <h1>Find your Yacht</h1>
   <div class="align">
@@ -52,20 +50,17 @@
   <br></br>
 </div>
 </form>
-
-<form>
 <h1 style="text-align: center;">List of Yachts</h1>
-  <div class="cards">
+<div class="cards">
   <% @yachts.each do |yacht| %>
   <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url()">
     <p>Name: <%= yacht.yacht_name %></p>
-    <p>Cost: <%= yacht.cost_per_night %></p>
+    <p>$<%= yacht.cost_per_night %>/night</p>
     <p>Location: <%= yacht.yacht_location %></p>
-    <p class="add_booking"><%= link_to "Add booking" %></p>
+    <p class="view_yacht"><%= link_to "View Yacht", yacht_path(yacht) %></p>
   </div>
   <% end %>
-  </div>
-</form>
+</div>
 
 
 

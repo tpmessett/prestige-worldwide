@@ -1,0 +1,14 @@
+<div class="container col-8">
+  <div class="card card-trip">
+    <%= cl_image_tag @booking.yacht.photo.key, crop: :fill %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @booking.yacht.yacht_name %> in <%= @booking.yacht.yacht_location %></p></h2>
+        <p>Check-in: <%= @booking.start_date %> Checkout: <%= @booking.end_date %></p>
+        <p><%= @booking.yacht.description %></p>
+      </div>
+      <h2 class="card-trip-pricing">£<%= @total %></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+</div>
