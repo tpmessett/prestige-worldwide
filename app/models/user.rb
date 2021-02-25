@@ -5,5 +5,6 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :yachts
   has_many :incoming_bookings, through: :yachts, source: :bookings
+  has_one_attached :photo
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 end
