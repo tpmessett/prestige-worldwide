@@ -4,7 +4,7 @@
   <%= f.input :yacht_name %>
   <%= f.input :Address %>
   <%= f.input :cost_per_night %>
-  <%= f.input :yacht_location %>
+  <%= f.input :yacht_location, html: { id: :yacht_address } %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Create yacht", class: "btn btn-primary" %>
