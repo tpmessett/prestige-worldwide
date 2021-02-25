@@ -41,6 +41,18 @@ img {
   max-height: 100%;
 }
 
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .col {
   padding: 15px
 }

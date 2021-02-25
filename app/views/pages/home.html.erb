@@ -21,7 +21,7 @@ its kind was laid. Annually, it can register well over 3000 bookings.  </p>
     <div class="col-6">
       <div class="yacht card">
         <%= link_to yacht_path(yacht) do %>
-        <%= cl_image_tag yacht.photo.key, crop: :fill%>
+        <%= cl_image_tag yacht.photo.key, crop: :fill, class: "card-image"%>
         <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= yacht.yacht_name %></h5>
