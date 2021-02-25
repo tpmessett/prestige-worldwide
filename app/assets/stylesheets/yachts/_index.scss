@@ -5,9 +5,16 @@
   padding: 10px;
 }
 .card-category {
-  padding: 15px;
-  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+  color: black;
+  opacity: 0.9;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-category:hover {
+  box-shadow: 0 0 0px rgba(0,0,0,0);
+  }
 
  .view_yacht {
   color: #000;

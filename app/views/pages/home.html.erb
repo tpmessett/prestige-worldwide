@@ -1,8 +1,8 @@
 <div class="header">
   <div class ="container head-text">
-    <h3>Welcome to Prestige Worldwide</h3>
-    <p>Floating success palaces for hire</p>
-    <p><%= link_to "Book a prestige Yacht now!", yachts_path, class: "btn btn-outline-success" %></p>
+    <h3 style="color: white;">Welcome to Prestige Worldwide</h3>
+    <p style="color: white;"">Floating success palaces for hire</p>
+    <p><%= link_to "Book a prestige Yacht now!", yachts_path, class: "btn btn-primary" %></p>
   </div>
 
 </div>
@@ -15,7 +15,9 @@
     <% @yachts.each do |yacht| %>
     <div class="col-6">
       <div class="yacht card">
+        <%= link_to yacht_path(yacht) do %>
         <%= cl_image_tag yacht.photo.key, crop: :fill%>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= yacht.yacht_name %></h5>
           <p class="card-text"><%= yacht.description %></p>
@@ -31,6 +33,6 @@
   <h3 class="featured">Invest in Prestige worldwide</h3>
     <p>We're much more than just quality boats, we offer a range of services for the discerning individual and with fast plans for global expansion on all seven continents we're looking for investment now. View our investment pitch now!</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DQDVDOKuA-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="mailto: yourasmartcookie@prestigeworldwide.com"><button type="button" class="btn btn-outline-success">Learn more about investing</button></a></p>
+    <p><a href="mailto: yourasmartcookie@prestigeworldwide.com"><button type="button" class="btn btn-primary" style="margin-top: 20px;">Learn more about investing</button></a></p>
   </div>
 </div>
