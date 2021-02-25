@@ -19,7 +19,9 @@
     </div>
     <% end %>
     <% else %>
-    <p> You don't have any yachts yet. </p>
+    <div class="none">
+      <p> You don't have any yachts yet. </p>
+    </div>
     <% end %>
     <div>
       <%= link_to new_yacht_path do %>

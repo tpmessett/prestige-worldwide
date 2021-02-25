@@ -9,6 +9,11 @@
 
 .card {
   margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  box-shadow: 0 0 0px rgba(0,0,0,0.2);
 }
 
 .card-footer {
@@ -22,9 +27,13 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
   color: black;
   opacity: 0.9;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip:hover {
+  box-shadow: 0 0 0px rgba(0,0,0,0.2);
 }
 
 .card-trip > img {
