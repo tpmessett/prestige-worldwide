@@ -1,3 +1,5 @@
+@import "show";
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -7,12 +9,6 @@
 .card-category {
   padding: 15px;
   border-radius: 5px;
-}
-
-.card-image {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
 }
 
  .view_yacht {
@@ -28,6 +24,12 @@
  h2 {
   margin-bottom: 40px;
  }
+
+ .yacht-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
 //  body {
 //   width: 500px;
