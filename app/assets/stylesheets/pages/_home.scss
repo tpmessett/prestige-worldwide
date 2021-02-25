@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 body {
-  background-color: black;
-  color: white
+  background-color: #e6e8e6;
+  color: #000f08
 }
 
 .header {
@@ -10,11 +10,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://source.unsplash.com/random/?yacht);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://mansion-global-app.s3.amazonaws.com/stories/yachts-special-report-docking-your-yacht-in-style/assets/kWONA81E3u/yachtports_lead-2560x1400.jpeg);
   background-size: cover;
   background-position: center;
   text-align: center;
-  
+  box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.head-text {
+  padding: 15px;
+  color: #e6e8e6;
 }
 
 .main {
@@ -23,7 +28,7 @@ body {
 }
 
 .yacht {
-  color: black
+  color: #000f08
 }
 
 .btn {
@@ -42,23 +47,23 @@ img {
 
 .featured {
   padding: 15px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.781);
-  display: inline-block;
   border-radius: 8px;
   font-weight: bold;
-  
- 
-  
+  color: #000f08;
+  background-color: #406e8e;
+  display: inline-block;
+  margin: 30px 0
+
 }
 
 .footer {
   padding: 20px;
-  background-color: #616b72;
+  background-color: #000f08;
   min-height: 300px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  color: #e6e8e6
 
 }
 

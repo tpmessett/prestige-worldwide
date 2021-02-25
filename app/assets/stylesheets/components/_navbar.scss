@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  color: white;
-  background-color: black;
+  color: #e6e8e6;
+  background-color: #406E8E;
+  box-shadow: 0 2px 2px -2px #000F08;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,26 +22,27 @@
 }
 
 .circle-icon {
-    background: white;
+    background: #e6e8e6;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
     padding: 10px;
+    color: #406E8E
 }
 
 .circle-icon:hover {
-  background: black;
-  color: white;
+  background: #406E8E;
+  color: #e6e8e6;
 }
 
 
 .navbar-light .navbar-nav .nav-link {
-  color: white;
+  color: #e6e8e6;
   margin-right: 10px
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  background-color: white;
+  background-color: #e6e8e6;
 }

@@ -56,20 +56,24 @@
       <div class="cards">
         <% @yachts.each do |yacht| %>
           <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.0)), url()">
-            <%= cl_image_tag yacht.photo.key, crop: :fill%>
-            <p>Name: <%= yacht.yacht_name %></p>
+            <%= link_to yacht_path(yacht) do %>
+              <%= cl_image_tag yacht.photo.key, crop: :fill%>
+            <% end %>
+            <p class="head-card">Name: <%= yacht.yacht_name %></p>
             <p>£<%= yacht.cost_per_night %>/night</p>
             <p>Location: <%= yacht.yacht_location %></p>
-            <p class="view_yacht"><%= link_to "View Yacht", yacht_path(yacht) %></p>
+            <%= link_to yacht_path(yacht) do %>
+              <button class="btn btn-primary">View This Yacht</button>
+            <% end %>
           </div>
         <% end %>
         </div>
     </div>
     <div class="col-sm-6">
       <div id="map"
-           style="width: 100%; height: 100%;"
+           style="width: 90%; height: 100vh; position: sticky:top:0;"
            data-markers="<%= @markers.to_json %>"
-           data-mapbox-api-key="pk.eyJ1IjoidHBtZXNzZXR0IiwiYSI6ImNra3NkZDliZTBkZ3Yyb3BiYTJsZmZzNjUifQ.zhT0tjfXON0M_1zRolkJ-g">
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">>
       </div>
     </div>
   </div>
