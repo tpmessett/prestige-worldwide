@@ -5,25 +5,33 @@
         <div class="card-header">
           <%= "This yacht is moored in #{@yacht.yacht_location}" %>
         </div>
-        <%= cl_image_tag @yacht.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @yacht.photo.key, crop: :fill, class: "yacht_show_image" %>
         <div class="card-body">
           <h5 class="card-title"><%= @yacht.yacht_name %></h5>
           <p class="card-text"><%= @yacht.description %></p>
-          <%= link_to new_yacht_booking_path(@yacht.id) do %>
-            <button class="btn btn-primary">Book This Yacht</button>
-        <% end %>
         </div>
         <div class="card-footer">
-        <%= "From £#{@yacht.cost_per_night} per night" %>
+          <%= "From £#{@yacht.cost_per_night} per night" %>
         </div>
+      </div>
+      <div class="card">
+        <h3 class="text-center">New booking</h3>
+        <p class="pl-2">reservation dates:</p>
+        <div class="col d-flex justify-content-center">
+        <%= simple_form_for [@yacht, @booking] do |f| %>
+        <div class="date_picker"><%= f.input :start_date, as: :date, html5: true, label: false %></div>
+        <div class="date_picker"><%= f.input :end_date, as: :date, html5: true, label: false %></div>
+        <%= f.submit "Create booking", class: "btn btn-primary" %>
+        <% end %>
+      </div>
       </div>
     </div>
     <div class="col-sm-6">
       <div id="map"
-         style="width: 90%; height: 100vh; position: sticky:top:0;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+      style="width: 90%; height: 100vh; margin-top: 15px; position: sticky:top:0;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
+</div>
 </div>

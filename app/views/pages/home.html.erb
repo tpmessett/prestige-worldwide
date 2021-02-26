@@ -8,15 +8,20 @@
 </div>
 <div class="main container">
   <h3 class="featured">Succeed with Prestige Worldwide</h3>
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente voluptatibus doloribus ea ipsam recusandae repellendus, ratione esse! Molestiae, repellendus? Nostrum sint aut sequi aspernatur doloremque. Accusamus quia in quaerat iusto pariatur id ducimus, porro velit impedit voluptate quas, maxime exercitationem debitis non soluta culpa ratione! In id architecto, a!</p>
+  <p> Prestige Worldwide was founded in 2021. In the beginning, their were two brothers and best friends, who built a small
+sailboat and thus earned the first spurs. Within a few years they explored the entire
+Mediterranean Sea, the Baltic and the Caribbean, crossed the Atlantic Ocean several times, sailed to
+the Arctic Circle and circumnavigated Iceland. they also dedicated themselves to the
+mediation of yachting and karate. The foundation stone for one of the largest companies of
+its kind was laid. Annually, it can register well over 3000 bookings.  </p>
 
-  <h3 class="featured">Featured yachts for hire:</h3>
+  
   <div class="row cols-1 row-cols-md-2 g-4">
     <% @yachts.each do |yacht| %>
     <div class="col-6">
       <div class="yacht card">
         <%= link_to yacht_path(yacht) do %>
-        <%= cl_image_tag yacht.photo.key, crop: :fill%>
+        <%= cl_image_tag yacht.photo.key, crop: :fill, class: "card-image"%>
         <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= yacht.yacht_name %></h5>
