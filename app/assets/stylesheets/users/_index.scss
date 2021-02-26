@@ -3,3 +3,28 @@
   color: #000f08;
   padding-top: 50px;
 }
+
+.booking-container {
+  width: 100%;
+}
+
+.booking-card {
+  border-top: 1px solid lightgrey;
+  // background: #fff;
+  padding:14px 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+
+
+.btn-primary.no-margin {
+  margin: 0;
+}
