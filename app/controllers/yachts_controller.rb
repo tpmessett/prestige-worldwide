@@ -1,9 +1,15 @@
 class YachtsController < ApplicationController
   def index
+    @yachts = Yacht.all
+
+    if params[:price].present?
+      price = params[:price].to_i - 1
+      range = Yacht::PRICE_RANGES[price]
+      @yachts = @yachts.where("cost_per_night between #{range[0]} and #{range[1]}")
+    end
+
     if params[:destination].present?
-      @yachts = Yacht.search_yacht(params[:destination])
-    else
-      @yachts = Yacht.all
+      @yachts = @yachts.search_yacht(params[:destination])
     end
 
     @markers = @yachts.geocoded.map do |yacht|

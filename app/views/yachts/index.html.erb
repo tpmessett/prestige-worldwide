@@ -1,42 +1,43 @@
 
 <div class="sticky header-search">
-      <form class="search-form form-inline container mt-5 ">
-          <div class="col-auto my-1">
-          <label class="mr-sm-2" for="destination">Location</label>
-          <input class="text-input form-control" type="text" placeholder="Where are you going?" name="destination" id="destination" />
-          </div>
+  <h3 class="heading">Search for your dream yacht getaway now:</h3>
+  <form class="search-form form-inline container ">
+      <div class="col-auto my-1">
+      <label class="mr-sm-2" for="destination">Location</label>
+      <input class="text-input form-control" type="text" placeholder="Where are you going?" name="destination" id="destination" />
+      </div>
 
-          <div class="col-auto my-1">
-            <label class="mr-sm-2" for="checkin">Check-In</label>
-            <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id ="checkin" name="checkin" />
-          </div>
-          <div class="col-auto my-1">
-            <label class="mr-sm-2" for="checkout">Check-Out</label>
-            <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id="checkout" name="checkout" />
-          </div>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="checkin">Check-In</label>
+        <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id ="checkin" name="checkin" />
+      </div>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="checkout">Check-Out</label>
+        <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id="checkout" name="checkout" />
+      </div>
 
-        <div class="col-auto my-1">
-        <label class="mr-sm-2" for="guests">Guests</label>
-          <select id="guests" name="guests" type="text" class="custom-select form-control">
-            <option  selected value="5">up to 5 </option>
-              <option value="10">up to 10 </option>
-              <option value="25">up to 25 </option>
-              <option value="50">up to 50 </option>
-          </select>
-        </div>
-       <div class="col-auto my-1">
-          <label class="mr-sm-2" for="price">Price Range</label>
-          <select id="price" name="price" type="text" class="custom-select form-control">
-            <option selected value="1">£</option>
-              <option value="2">££</option>
-              <option value="3">£££</option>
-              <option value="4">££££</option>
-          </select>
-        </div>
-        <div id="search-button-div" class="col-auto my-1">
-          <button id="search-button" type="submit" class="btn btn-primary" style="float: right;">Search</button>
-        </div>
-      </form>
+    <div class="col-auto my-1">
+    <label class="mr-sm-2" for="guests">Guests</label>
+      <select id="guests" name="guests" type="text" class="custom-select form-control">
+        <option  selected value="5">up to 5 </option>
+          <option value="10">up to 10 </option>
+          <option value="25">up to 25 </option>
+          <option value="50">up to 50 </option>
+      </select>
+    </div>
+   <div class="col-auto my-1">
+      <label class="mr-sm-2" for="price">Price Range</label>
+      <select id="price" name="price" type="text" class="custom-select form-control">
+        <option selected value="1">£</option>
+          <option value="2">££</option>
+          <option value="3">£££</option>
+          <option value="4">££££</option>
+      </select>
+    </div>
+    <div id="search-button-div" class="col-auto my-1">
+      <button id="search-button" type="submit" class="btn btn-primary" style="float: right;">Search</button>
+    </div>
+  </form>
 </div>
 <div class="container">
   <div class="row">
@@ -51,7 +52,7 @@
             <p>£<%= yacht.cost_per_night %>/night</p>
             <p>Location: <%= yacht.yacht_location %></p>
             <%= link_to yacht_path(yacht) do %>
-              <p class="btn btn-primary btn-sm">View This Yacht</p>
+              <p class="btn btn-primary btn-md">View This Yacht</p>
             <% end %>
           </div>
         <% end %>

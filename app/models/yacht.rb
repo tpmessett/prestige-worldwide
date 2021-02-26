@@ -14,4 +14,5 @@ class Yacht < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+  PRICE_RANGES = [[1, 200], [201, 500], [501, 1000], [1001, 10000000]]
 end
