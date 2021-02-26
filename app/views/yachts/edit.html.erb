@@ -1,0 +1,12 @@
+<div class="container">
+  <h3 class="text-center" style="padding-top: 30px;">List your Yacht:</h3>
+  <%= simple_form_for(@yacht) do |f| %>
+  <%= f.input :yacht_name %>
+  <%= f.input :Address %>
+  <%= f.input :cost_per_night %>
+  <%= f.input :yacht_location, html: { id: :yacht_address } %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Update yacht", class: "btn btn-primary" %>
+  <% end %>
+</div>

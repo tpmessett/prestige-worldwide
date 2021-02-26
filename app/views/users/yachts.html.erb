@@ -12,6 +12,10 @@
         <%= link_to yacht_path(yacht.id) do %>
           <p class="btn btn-primary">View Yacht</p>
         <% end %>
+        <%= link_to edit_yacht_path(yacht.id) do %>
+          <p class="btn btn-light">Edit Yacht</p>
+        <% end %>
+        <br>
         <%= link_to yacht_path(yacht.id), method: :delete, data: {Confirm: "delete yacht?"} do %>
           <p class="btn btn-danger">Delete Yacht</p>
         <% end %>
