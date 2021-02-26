@@ -1,23 +1,18 @@
 <div class ="container">
-  <% if @bookings.length > 0 %>
+  <h1 class="my-5">My Bookings</h1>
+  <div class="booking-container">
     <% @bookings.each do |booking| %>
-      <div class="card">
-        <div class="card-header">
-          <%= "From: #{booking.start_date} To: #{booking.end_date}" %>
+      <div class="booking-card">
+        <div>
+          <h3><%= booking.yacht.yacht_name %> - <%= booking.yacht.yacht_location %></h3>
+          <span><%= "#{booking.start_date} - #{booking.end_date}" %></span>
         </div>
-        <div class="card-body">
-          <h5 class="card-title"><%= "#{booking.yacht.yacht_name}" %></h5>
-          <p class="card-text"><%= "#{booking.yacht.description}" %></p>
-          <%= link_to yacht_booking_path(booking.yacht_id, booking.id) do %>
-            <p class="btn btn-primary">View This Booking</p>
-          <% end %>
-        </div>
-        <div class="card-footer">
-          <p class="card-text"><%= "#{booking.yacht.yacht_location}" %></p>
+        <div>
+          <%= link_to "View Booking", yacht_booking_path(booking.yacht, booking), class: 'btn btn-primary no-margin rounded-0' %>
         </div>
       </div>
     <% end %>
-  <% else %>
-  <p> You don't have any bookings yet. Why not view our <%= link_to "available yachts?", yachts_path %></p>
-  <% end %>
+  </div>
 </div>
+
+

@@ -45,7 +45,9 @@
         <% @yachts.each do |yacht| %>
           <div class="card-category" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.0)), url()">
             <%= link_to yacht_path(yacht) do %>
-              <%= cl_image_tag yacht.photo.key, crop: :fill, class: "yacht-image"%>
+              <% if yacht.photo.attached? %>
+               <%= cl_image_tag yacht.photo.key, crop: :fill, class: "yacht-image"%>
+              <% end %>
             <% end %>
             <p class="head-card">Name: <%= yacht.yacht_name %></p>
             <p>£<%= yacht.cost_per_night %>/night</p>
