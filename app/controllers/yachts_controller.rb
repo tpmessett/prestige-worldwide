@@ -1,11 +1,16 @@
 class YachtsController < ApplicationController
   def index
-    @yachts = Yacht.all
+    if params[:destination].present?
+      @yachts = Yacht.search_yacht(params[:destination])
+    else
+      @yachts = Yacht.all
+    end
 
     @markers = @yachts.geocoded.map do |yacht|
       {
         lat: yacht.latitude,
-        lng: yacht.longitude
+        lng: yacht.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { yacht: yacht })
       }
     end
   end

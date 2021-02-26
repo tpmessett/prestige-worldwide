@@ -1,56 +1,44 @@
-<div class="container">
-  <form action="reservation.php" method="post">
-    <div class="elem-group">
-      <h1>Find your Yacht</h1>
-    <div class="align">
-      <div>
-      <legend>Select Location</legend>
-        <select id = "myList">
-          <option value = "1">St Tropez</option>
-          <option value = "2">Monaco</option>
-          <option value = "3">Cannes</option>
-          <option value = "4">Palma de Mallorca</option>
+
+<div class="header-search">
+    <form class="search-form form-inline container mt-3 ">
+        <div class="col-auto my-1">
+        <label class="mr-sm-2" for="destination">Location</label>
+        <input class="text-input form-control" type="text" placeholder="Where are you going?" name="destination" id="destination" />
+        </div>
+
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="checkin">Check-In</label>
+          <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id ="checkin" name="checkin" />
+        </div>
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="checkout">Check-Out</label>
+          <input class="date form-control" type="date" placeholder="dd-mm-yyyy" id="checkout" name="checkout" />
+        </div>
+
+      <div class="col-auto my-1">
+      <label class="mr-sm-2" for="guests">Guests</label>
+        <select id="guests" class="custom-select">
+          <option selected = "5">up to 5 </option>
+            <option value = "10">up to 10 </option>
+            <option value = "25">up to 25 </option>
+            <option value = "50">up to 50 </option>
         </select>
       </div>
-      <div>
-        <legend>Capacity</legend>
-          <select id = "myList">
-            <option value = "1">1-5</option>
-            <option value = "2">1-10</option>
-            <option value = "3">1-25</option>
-            <option value = "4">1-50</option>
-          </select>
+     <div class="col-auto my-1">
+        <label class="mr-sm-2" for="price">Price Range</label>
+        <select id="price" class="custom-select">
+          <option selected = "1">£</option>
+            <option value = "2">££</option>
+            <option value = "3">£££</option>
+            <option value = "4">££££</option>
+        </select>
       </div>
-      <div>
-        <legend>Price</legend>
-          <select id = "myList">
-            <option value = "1">$</option>
-            <option value = "2">$$</option>
-            <option value = "3">$$$</option>
-            <option value = "4">$$$$</option>
-          </select>
+      <div id="search-button-div" class="col-auto my-1">
+        <button id="search-button" type="submit" class="btn btn-primary" style="float: right;">Search</button>
       </div>
-    </div>
-              <br></br>
-      <div class="checkin_border">
-      <legend>Select Dates</legend>
-    <div class="checkin">
-      <div class="elem-group inlined">
-        <label for="checkin-date">Check-in Date</label>
-        <input type="date" id="checkin-date" name="checkin" required>
-      </div>
-      <div class="elem-group inlined">
-        <label for="checkout-date">Check-out Date</label>
-        <input type="date" id="checkout-date" name="checkout" required>
-      </div>
-    </div>
-    <button type="submit">Search</button>
-    <br></br>
-  </div>
-
-  </div>
-  </form>
-  <h2>See all our Luxurious floating destinations:</h2>
+    </form>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-sm-6">
       <div class="cards">
@@ -71,7 +59,7 @@
     </div>
     <div class="col-sm-6">
       <div id="map"
-           style="width: 90%; height: 100vh; position: sticky:top:0;"
+           style="width: 100%; height: 100vh; position: sticky:top:0;"
            data-markers="<%= @markers.to_json %>"
            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">>
       </div>

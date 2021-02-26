@@ -8,4 +8,10 @@ class Yacht < ApplicationRecord
   validates :Address, presence: true
   geocoded_by :Address
   after_validation :geocode, if: :will_save_change_to_Address?
+  include PgSearch::Model
+  pg_search_scope :search_yacht,
+    against: [ :yacht_location, :Address, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
