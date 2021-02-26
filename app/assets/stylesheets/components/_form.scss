@@ -51,7 +51,7 @@ font-size: small;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 80%;
   padding: 20px;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -59,3 +59,15 @@ font-size: small;
   bottom: -50px;
   border-radius: 50px;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 992px) {
+  .search-form {
+    max-width: 100%;
+    position: relative;
+    border-radius: 0px;
+  }
+}
+
+
+
