@@ -3,8 +3,12 @@
 div.sticky {
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: -20px;
+  top: 40px;
   z-index: 1;
+}
+
+.heading {
+  color: white;
 }
 
 .header-search {
@@ -134,23 +138,22 @@ button:hover {
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
-
+  }
+   .heading {
+    display: none;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+  .heading {
+    display: none;
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
@@ -159,10 +162,5 @@ button:hover {
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+
 
