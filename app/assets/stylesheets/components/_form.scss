@@ -1,0 +1,73 @@
+#destination {
+width: 150px;
+font-size: small;
+
+}
+
+#checkin {
+width: 150px;
+font-size: small;
+
+
+}
+
+#checkout {
+width: 150px;
+font-size: small;
+
+
+}
+
+#guests {
+font-size: small;
+
+}
+
+#price {
+font-size: small;
+}
+
+.form-inline label {
+  font-size: small;
+  justify-content: left;
+}
+
+.my-1 {
+  padding: 5px;
+}
+
+#search-button {
+  margin-top: 19px;
+
+  padding: 8px 12px;
+}
+
+#search-button-div {
+  position: relative;
+  min-height: 52px
+  }
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 992px) {
+  .search-form {
+    max-width: 100%;
+    position: relative;
+    border-radius: 0px;
+  }
+}
+
+
+
