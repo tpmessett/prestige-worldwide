@@ -8,7 +8,7 @@
         <%= cl_image_tag @yacht.photo.key, crop: :fill, class: "yacht_show_image" %>
         <div class="card-body">
           <h5 class="card-title"><%= @yacht.yacht_name %></h5>
-          <p class="card-text"><%= @yacht.description %></p>
+          <p><%= @yacht.description %></p>
         </div>
         <div class="card-footer">
           <%= "From £#{@yacht.cost_per_night} per night" %>
